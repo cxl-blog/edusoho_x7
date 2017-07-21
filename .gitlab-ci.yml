@@ -4,11 +4,14 @@ stages:
 variables:
   MYSQL_DATABASE: edusoho_test
   MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+  SONAR_HOST:  http://sonar.codeages.net
+  SONAR_TOKEN: c0ad50d0295c739b72641c3e35d7b2c9a5aa924b
 
 before_script:
   - cp app/config/parameters_test.yml.dist app/config/parameters_test.yml
   - cp app/config/parameters.yml.dist app/config/parameters.yml
   - "sed -i 's/\\s*database_host.*/    database_host: mysql/g' app/config/parameters_test.yml"
+  - "sed -i 's/\\s*database_name.*/    database_name: edusoho_x7/g' app/config/parameters_test.yml"
   - mkdir web/files
   - mkdir app/data/private_files
   - touch app/config/routing_plugins.yml

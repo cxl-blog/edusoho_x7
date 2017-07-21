@@ -22,8 +22,8 @@ class ReflectionTest extends BaseTestCase
         $test = $reflectionUtiles->getproperty($person, 'id');
 
         var_dump($test);
+
         //$this->assertArrayEquals('7' ,$test);
     }
-
 }
 ?>

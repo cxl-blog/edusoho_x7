@@ -19,6 +19,7 @@
             <directory>../src/Topxia/Common/Tests</directory>
             <directory>../src/Topxia/Component/*/Tests</directory>
             <directory>../src/Topxia/Service/*/Tests</directory>
+            <directory>../src/Custom/Test</directory>
         </testsuite>
     </testsuites>
 
@@ -55,6 +56,12 @@
                 <file>../src/Topxia/Service/*/Dao/*Dao.php</file>
             </exclude>
 
+            <directory>../src/Custom/Test</directory>
+            <exclude>
+            <directory>../src/Custom/Test</directory>
+            <file>../src/Custom/Test/AddUserServiceTest.php</file>
+            <file>../src/Custom/Test/ReflectionTest.php</file>
+            </exclude>
 <!--
             <exclude>
                 <directory>../src/*/*Bundle/Resources</directory>
